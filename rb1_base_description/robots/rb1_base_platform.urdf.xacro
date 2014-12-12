@@ -19,11 +19,9 @@
 	<xacro:include filename="$(find rb1_base_description)/urdf/sensors/all_sensors.urdf.xacro" />
   
   
-  
 	<!-- ***************** -->
 	<!-- Global parameters -->
-	<!-- ***************** -->
-  
+	<!-- ***************** -->  
 	<xacro:property name="PI" value="3.1415926535897931"/>
   
 	<!-- Wheel parameters -->
@@ -34,10 +32,12 @@
 	<!-- Castor paramters -->
 	<xacro:property name="omni_back_x" value="0.185" />
 	<xacro:property name="omni_back_y" value="0.0" />
-	<xacro:property name="omni_back_z" value="0.026" />
+	<!-- xacro:property name="omni_back_z" value="0.028" / -->
+	<xacro:property name="omni_back_z" value="0.030" />
 	<xacro:property name="omni_front_x" value="0.133" /> 
 	<xacro:property name="omni_front_y" value="0.142" />
-	<xacro:property name="omni_front_z" value="0.026" />
+	<!-- xacro:property name="omni_front_z" value="0.028" / -->
+	<xacro:property name="omni_front_z" value="0.030" />
 
 	<!-- Flag to select the high or low quality model -->
 	<xacro:property name="hq" value="true" />
@@ -51,13 +51,12 @@
 	<!-- RB-1 base -->
 	<xacro:rb1_base name="rb1_base" publish_bf="true" hq="${hq}" />
   
-	<!-- Gazebo ros control pluggins -->
+	<!-- Gazebo ros control plugins -->
 	<xacro:ros_control/>
 	
-	<!-- Gazebo skid steering pluggins -->
+	<!-- Gazebo skid steering plugins -->
 	<xacro:diff_drive/>
-  
-  
+    
 	<!-- WHEELS -->
 	<xacro:rubber_wheel name="right" parent="base_link" reflect="false" hq="${hq}">
 		<origin xyz="${wheel_offset_x} -${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
@@ -72,6 +71,13 @@
 		<origin xyz="-${omni_back_x} ${omni_back_y} ${omni_back_z}" rpy="0 0 0"/>
 	</xacro:omni_wheel>
 
+	<xacro:omni_wheel name="omni_front_left" parent="base_link" hq="${hq}">
+		<origin xyz="${omni_front_x} ${omni_front_y} ${omni_front_z}" rpy="0 0 0"/>
+	</xacro:omni_wheel>
+
+	<xacro:omni_wheel name="omni_front_right" parent="base_link" hq="${hq}">
+		<origin xyz="${omni_front_x} -${omni_front_y} ${omni_front_z}" rpy="0 0 0"/>
+	</xacro:omni_wheel>
 
 	<!-- SENSORS -->    
 	<xacro:sensor_hokuyo_utm30lx name="hokuyo" parent="base_link">

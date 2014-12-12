@@ -50,7 +50,7 @@
       </visual>
       
       <collision>
-				<origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+		<origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
         <geometry>
           <cylinder length="${wheel_height}" radius="${wheel_radius}" />
         </geometry>

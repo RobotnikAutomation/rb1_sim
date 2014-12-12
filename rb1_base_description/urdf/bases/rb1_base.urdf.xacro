@@ -21,7 +21,9 @@
     </link>
 
     <joint name="base_footprint_joint" type="fixed">
-      <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0" /> <!-- ${wheel_radius} property must be defined inside wheel description -->
+      <!-- origin xyz="0 0 ${wheel_radius}" rpy="0 0 0" / -->
+       <!-- origin xyz="0 0 ${wheel_radius - wheel_offset_z}" rpy="0 0 0" / -->
+       <origin xyz="0 0 0.025" rpy="0 0 0" />
       <parent link="base_footprint"/>
       <child link="base_link" />
     </joint>    
@@ -41,21 +43,21 @@
 	     <mesh filename="package://rb1_base_description/meshes/bases/rb1_base.dae"/>
        </geometry>
        </xacro:if>
-       <!-- xacro:unless value="${hq}">
+       <xacro:unless value="${hq}">
        <geometry>
-       <mesh filename="package://rb1_base_description/meshes/bases/rb1_base_simple.stl"/>
+       <mesh filename="package://rb1_base_description/meshes/bases/rb1_base.stl"/>
        </geometry>
-       </xacro:unless -->
+       </xacro:unless>
        <material name="darkgrey">
          <color rgba="0.1 0.1 0.1 1"/>
        </material>
     </visual>  
-    <collision>
+    <!-- collision>
        <origin xyz="0 0 0" rpy="0 0 0 " />
        <geometry>
          <mesh filename="package://rb1_base_description/meshes/bases/rb1_base.dae"/>
        </geometry>
-    </collision>
+    </collision -->
   </link>
 
   </xacro:macro>

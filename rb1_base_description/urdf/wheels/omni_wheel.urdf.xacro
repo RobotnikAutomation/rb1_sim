@@ -3,21 +3,22 @@
 
   <xacro:property name="M_PI" value="3.1415926535897931" />
   <!-- Wheels -->
-  <property name="wheel_radius" value="0.076" /> 
-  <property name="wheel_height" value="0.050" />
-  <property name="wheel_mass" value="1.0" /> <!-- in kg-->
+  <property name="omni_wheel_radius" value="0.051" /> 
+  <property name="omni_wheel_height" value="0.025" />
+  <property name="omni_wheel_mass" value="0.3" /> <!-- in kg-->
  
  
   <xacro:macro name="cylinder_inertia" params="m r h">
     <inertia  ixx="${m*(3*r*r+h*h)/12}" ixy = "0" ixz = "0"
               iyy="${m*(3*r*r+h*h)/12}" iyz = "0"
               izz="${m*r*r/2}" /> 
-  </xacro:macro>interc
+  </xacro:macro>
  
   <xacro:macro name="omni_wheel" params="name parent *origin hq">
   
 <!--WHEEL TIRE -->
-    <joint name="joint_${name}_wheel" type="continuous">
+    <!-- joint name="joint_${name}_wheel" type="continuous" -->
+    <joint name="joint_${name}_wheel" type="fixed">
       <parent link="${parent}"/>
       <child link="${name}_wheel"/>
       <insert_block name="origin" />
@@ -39,7 +40,7 @@
         <xacro:unless value="${hq}">
           <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
           <geometry>           
-            <cylinder length="${wheel_height}" radius="${wheel_radius}" />
+            <cylinder length="${omni_wheel_height}" radius="${omni_wheel_radius}" />
           </geometry>      
         </xacro:unless>
       </visual>
@@ -47,7 +48,7 @@
       <collision>
       <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
         <geometry>
-          <cylinder length="${wheel_height}" radius="${wheel_radius}" />
+          <cylinder length="${omni_wheel_height}" radius="${omni_wheel_radius}" />
         </geometry>
       </collision>    
       
@@ -61,30 +62,28 @@
       <inertial>
         <mass value="${wheel_mass}" />
         <origin xyz="0 0 0" />
-        <cylinder_inertia  m="${wheel_mass}" r="${wheel_radius}" h="${wheel_height}" />
+        <cylinder_inertia  m="${omni_wheel_mass}" r="${omni_wheel_radius}" h="${omni_wheel_height}" />
         <!-- inertia  ixx="0.001" ixy="0.0"  ixz="0.0"  iyy="0.001"  iyz="0.0"  izz="0.001" / -->
       </inertial>
     </link>
 
     
-    <transmission name="${name}_wheel_joint_trans">
+    <!-- transmission name="${name}_wheel_joint_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="joint_${name}_wheel" />
       <actuator name="${name}_wheel_joint_motor">
         <hardwareInterface>EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
-    </transmission>
+    </transmission -->
 
     <gazebo reference="${name}_wheel">
-			<!-- mu1 value="5.0"/>
-			<mu2 value="0.5"/ -->
 			<mu1 value="0.0"/>
 			<mu2 value="0.0"/>
 			<kp value="10000000.0" />
 			<kd value="1.0" />
 			<fdir1 value="1 0 0"/>
-      <turnGravityOff>false</turnGravityOff>
+            <turnGravityOff>false</turnGravityOff>
     </gazebo>
     
    
