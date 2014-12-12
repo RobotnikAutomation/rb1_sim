@@ -70,10 +70,10 @@
     <transmission name="${name}_wheel_joint_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="joint_${name}_wheel" />
-      <!-- actuator name="${name}_wheel_joint_motor">
+      <actuator name="${name}_wheel_joint_motor">
         <hardwareInterface>EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
-      </actuator -->
+      </actuator>
     </transmission>
 
     <gazebo reference="${name}_wheel">
