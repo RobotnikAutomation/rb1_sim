@@ -45,19 +45,19 @@
         </xacro:unless>
       </visual>
       
-      <collision>
+      <!-- collision>
       <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
         <geometry>
           <cylinder length="${omni_wheel_height}" radius="${omni_wheel_radius}" />
         </geometry>
-      </collision>    
+      </collision -->    
       
-      <!-- collision>
+      <collision>
       <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />      
        <geometry>
-         <sphere radius="${wheel_radius}"/>
+         <sphere radius="${omni_wheel_radius}"/>
        </geometry>
-      </collision -->
+      </collision>
       
       <inertial>
         <mass value="${wheel_mass}" />
