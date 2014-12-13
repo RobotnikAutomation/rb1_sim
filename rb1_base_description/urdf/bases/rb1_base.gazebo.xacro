@@ -19,24 +19,25 @@
 	<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">    
 	    <alwaysOn>true</alwaysOn>
         <updateRate>50.0</updateRate>
-        <leftJoint>joint_left_wheel</leftJoint>
-        <rightJoint>joint_right_wheel</rightJoint>
-        <wheelSeparation>0.5380</wheelSeparation>
-        <wheelDiameter>0.2410</wheelDiameter>
-        <!-- torque>20</torque -->
+        <!-- leftJoint>joint_left_wheel</leftJoint>
+        <rightJoint>joint_right_wheel</rightJoint -->
+        <leftJoint>joint_right_wheel</leftJoint>
+        <rightJoint>joint_left_wheel</rightJoint>
+        <wheelSeparation>0.3660</wheelSeparation>
+        <wheelDiameter>0.1524</wheelDiameter>
         <commandTopic>cmd_vel</commandTopic>
         <odometryTopic>odom</odometryTopic>
         <odometryFrame>odom</odometryFrame>
         <robotBaseFrame>base_footprint</robotBaseFrame>
-        <robotNamespace>/rb1_base</robotNamespace>	       
+        <!-- robotNamespace></robotNamespace -->	  
         <rosDebugLevel>na</rosDebugLevel>
         <publishWheelTF>false</publishWheelTF>  
         <publishWheelJointState>false</publishWheelJointState>
         <wheelAcceleration>0</wheelAcceleration>
         <wheelTorque>5</wheelTorque>
-        <!-- odometrySource>"encoder"</odometrySource --> 
-        <odometrySource>"world"</odometrySource>        
-        <publishTf>0.0000</publishTf>            
+        <odometrySource>encoder</odometrySource> 
+        <!-- odometrySource>world</odometrySource -->        
+        <publishTf>1</publishTf>        
 	</plugin>
 	</gazebo>		
     </xacro:macro>

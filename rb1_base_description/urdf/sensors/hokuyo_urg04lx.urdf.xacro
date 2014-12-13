@@ -49,8 +49,8 @@
 							<!-- samples>640</samples -->
 							<samples>681</samples>
 							<resolution>1</resolution>
-							<min_angle>2.0943951</min_angle>
-							<max_angle>-2.0943951</max_angle>
+							<min_angle>-2.0943951</min_angle>
+							<max_angle>2.0943951</max_angle>
 						</horizontal>
 					</scan>
 					<range>
