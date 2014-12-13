@@ -8,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   rb1_base_control
   rb1_base_description
-  rb1_joystick
+  rb1_base_joystick
   std_msgs
   std_srvs
   tf
@@ -86,7 +86,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES rb1_base_gazebo
-#  CATKIN_DEPENDS gazebo_ros rb1_base_control rb1_base_description rb1_joystick std_msgs std_srvs tf
+#  CATKIN_DEPENDS gazebo_ros rb1_base_control rb1_base_description rb1_base_joystick std_msgs std_srvs tf
 #  DEPENDS system_lib
 )
 
