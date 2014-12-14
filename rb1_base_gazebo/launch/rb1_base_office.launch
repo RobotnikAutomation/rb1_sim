@@ -5,7 +5,7 @@
   <arg name="debug" default="false"/>
   <arg name="gui" default="true"/>
 
-  <!-- summit_xl_control launch file -->
+  <!-- rb1_base_control launch file -->
   <include file="$(find rb1_base_control)/launch/rb1_base_control.launch" />
 
   

@@ -28,8 +28,6 @@
   </include>
 
   <!-- Load the URDF into the ROS Parameter Server -->
-  <!-- param name="robot_description"
-         command="$(find xacro)/xacro.py '$(find summit_xl_description)/urdf/summit_xl.urdf'" / -->
   <param name="robot_description"
          command="$(find xacro)/xacro.py '$(find rb1_base_description)/robots/rb1_base_platform.urdf.xacro'" />
          
