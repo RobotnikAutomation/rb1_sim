@@ -12,3 +12,4 @@ global_costmap:
     resolution: 0.025
     origin_x: 0.0
     origin_y: 0.0
+    inflation_radius: 0.26  
