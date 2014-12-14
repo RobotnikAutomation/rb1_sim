@@ -7,7 +7,7 @@
       <plugin name="ros_control" filename="libgazebo_ros_control.so">
         <robotNamespace>/rb1_base</robotNamespace>
         <robotParam>robot_description</robotParam>
-        <controlPeriod>0.003</controlPeriod>
+        <controlPeriod>0.001</controlPeriod> <!-- controlPeriod>0.003</controlPeriod --> 
 	    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
       </plugin>
     </gazebo>
@@ -23,7 +23,8 @@
         <rightJoint>joint_right_wheel</rightJoint -->
         <leftJoint>joint_right_wheel</leftJoint>
         <rightJoint>joint_left_wheel</rightJoint>
-        <wheelSeparation>0.3660</wheelSeparation>
+        <wheelSeparation>0.365</wheelSeparation>
+        <!-- wheelDiameter>0.1524</wheelDiameter -->
         <wheelDiameter>0.1524</wheelDiameter>
         <commandTopic>cmd_vel</commandTopic>
         <odometryTopic>odom</odometryTopic>
@@ -35,8 +36,8 @@
         <publishWheelJointState>false</publishWheelJointState>
         <wheelAcceleration>0</wheelAcceleration>
         <wheelTorque>5</wheelTorque>
-        <odometrySource>encoder</odometrySource> 
-        <!-- odometrySource>world</odometrySource -->        
+        <!-- odometrySource>encoder</odometrySource --> 
+        <odometrySource>world</odometrySource>        
         <publishTf>1</publishTf>        
 	</plugin>
 	</gazebo>		
