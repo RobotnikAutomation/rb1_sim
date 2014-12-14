@@ -50,7 +50,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES summit_xl_robot_control
+#  LIBRARIES 
   CATKIN_DEPENDS 
     nav_msgs 
     robotnik_msgs
@@ -72,23 +72,13 @@ include_directories(
   ${catkin_INCLUDE_DIRS} 
 )
 
-## Declare a cpp library
-# add_library(summit_xl_robot_control
-#   src/${PROJECT_NAME}/summit_xl_robot_control.cpp
-# )
-
 ## Declare a cpp executable
 add_executable(rb1_base_joystick src/rb1_base_joystick.cpp)
 
 add_dependencies(rb1_base_joystick robotnik_msgs_generate_messages_cpp)
 add_dependencies(rb1_base_joystick rb1_base_joystick_generate_messages_cpp)
 
-## Add cmake target dependencies of the executable/library
-## as an example, message headers may need to be generated before nodes
-# add_dependencies(summit_xl_robot_control_node summit_xl_robot_control_generate_messages_cpp)
-
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(summit_xl_robot_control_node
 target_link_libraries(rb1_base_joystick
    ${catkin_LIBRARIES}
  )
