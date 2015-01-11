@@ -42,7 +42,7 @@
       xyz="0.074 0.0 0.668"
       rpy="0.0 0.0 0.0" />
     <parent
-      link="link2_rb1_torso" />
+      link="link2_torso" />
     <child
       link="base_link_rb1_arm" />
     <axis
