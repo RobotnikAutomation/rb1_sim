@@ -8,6 +8,13 @@
   <xacro:property name="joint_damping" value="0.5"/>
   <xacro:property name="joint_friction" value="0.5"/>
 
+  <xacro:property name="j1_torso_mechanical_reduction" value="320.0"/>
+  <xacro:property name="j1_torso_motor_torque_constant" value="1.0"/>
+  <xacro:property name="j1_head_mechanical_reduction" value="320.0"/>
+  <xacro:property name="j1_head_motor_torque_constant" value="1.0"/>
+  <xacro:property name="j2_head_mechanical_reduction" value="320.0"/>
+  <xacro:property name="j2_head_motor_torque_constant" value="1.0"/>
+
   <xacro:macro name="rb1_torso_3dof" params="name hq">
 
   <!-- Robot mechanical and motor parameters -->
@@ -18,7 +25,7 @@
     name="base_link_rb1_torso">
   </link>		
   
-  <link name="link1_rb1_torso">
+  <link name="link1_torso">
     <inertial>
       <mass value="3.0" />
       <origin xyz="0 0 0" />
@@ -57,12 +64,12 @@
     <parent
       link="base_link_rb1_torso" />
     <child
-      link="link1_rb1_torso" />
+      link="link1_torso" />
     <axis
       xyz="0 0 0" />
   </joint>
 
-  <link name="link2_rb1_torso">
+  <link name="link2_torso">
     <inertial>
       <mass value="2.0" />
       <origin xyz="0 0 0" />
@@ -93,19 +100,29 @@
   </link>
 
   <joint
-	name="j1_rb1_torso"
+	name="j1_torso"
 	type="prismatic">
 	<origin
       xyz="0 0 0"
       rpy="0.0 0.0 0.0" />
-	<parent link="link1_rb1_torso" />	
-    <child link="link2_rb1_torso" />
+	<parent link="link1_torso" />	
+    <child link="link2_torso" />
     <axis xyz="0 0 1" />
     <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${0.360}" lower="${0}"/>
     <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
   </joint>
 
-  <link name="link1_head_rb1_torso">
+  <transmission name="j1_torso_trans">
+	 <type>transmission_interface/SimpleTransmission</type>
+     <joint name="j1_torso" />
+     <actuator name="j1_torso_motor">
+	    <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>${j1_torso_mechanical_reduction}</mechanicalReduction>
+		<motorTorqueConstant>${j1_torso_motor_torque_constant}</motorTorqueConstant>
+	 </actuator>	 
+  </transmission>
+
+  <link name="link1_head">
     <inertial>
       <mass value="1.0" />
       <origin xyz="0 0 0" />
@@ -136,19 +153,30 @@
   </link>
 
   <joint
-	name="j1_head_rb1_torso"
+	name="j1_head"
 	type="revolute">
 	<origin
       xyz="0.010 0.0 0.940"
       rpy="0.0 0.0 0.0" />
-	<parent link="link2_rb1_torso" />	
-    <child link="link1_head_rb1_torso" />
+	<parent link="link2_torso" />	
+    <child link="link1_head" />
     <axis xyz="0 0 1" />
     <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/2}" lower="${-PI/2}"/>
     <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
   </joint>
 
-  <link name="link2_head_rb1_torso">
+  <transmission name="j1_head_trans">
+	 <type>transmission_interface/SimpleTransmission</type>
+     <joint name="j1_head" />
+     <actuator name="j1_head_motor">
+	    <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>${j1_head_mechanical_reduction}</mechanicalReduction>
+		<motorTorqueConstant>${j1_head_motor_torque_constant}</motorTorqueConstant>
+	 </actuator>	 
+  </transmission>
+
+
+  <link name="link2_head">
     <inertial>
       <mass value="1.0" />
       <origin xyz="0 0 0" />
@@ -178,19 +206,29 @@
     </collision>
   </link>
 
+
   <joint
-	name="j2_head_rb1_torso"
+	name="j2_head"
 	type="revolute">
 	<origin
       xyz="0.105 0.0 0.0"
       rpy="0.0 0.0 0.0" />
-	<parent link="link1_head_rb1_torso" />	
-    <child link="link2_head_rb1_torso" />
+	<parent link="link1_head" />	
+    <child link="link2_head" />
     <axis xyz="0 1 0" />
     <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/4}" lower="${-PI/4}"/>
     <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
   </joint>
 
+  <transmission name="j2_head_trans">
+	 <type>transmission_interface/SimpleTransmission</type>
+     <joint name="j2_head" />
+     <actuator name="j2_head_motor">
+	    <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>${j2_head_mechanical_reduction}</mechanicalReduction>
+		<motorTorqueConstant>${j2_head_motor_torque_constant}</motorTorqueConstant>
+	 </actuator>	 
+  </transmission>
 
   </xacro:macro>
 </robot>
