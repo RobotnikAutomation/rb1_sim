@@ -1,0 +1,4 @@
+geometry_msgs/Twist cmd_vel
+float64 joint_selection
+float64 select_reference
+uint8 op_mode
