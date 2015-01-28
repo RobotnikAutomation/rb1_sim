@@ -1,6 +1,6 @@
 /*
  * rb1_base_joystick
- * Copyright (c) 2011, Robotnik Automation, SLL
+ * Copyright (c) 2015, Robotnik Automation, SLL
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
