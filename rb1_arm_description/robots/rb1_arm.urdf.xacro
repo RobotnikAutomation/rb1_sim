@@ -12,6 +12,24 @@
 
 	<!-- Import all available sensors -->
 	<!-- xacro:include filename="$(find rb1_arm_description)/urdf/sensors/all_sensors.urdf.xacro" / -->
+
+	<xacro:include filename="$(find rb1_arm_description)/urdf/grippers/two_finger_gripper.urdf.xacro" />
+
+	<!-- Joint elements -->
+	<joint
+	  name="gripper_joint"
+      type="fixed">
+    <origin
+      xyz="0.0 0.0 0.0"
+      rpy="0.0 ${-PI/2} 0.0" />
+    <parent
+      link="end_effector_rb1_arm" />
+    <child
+      link="base_link_gripper" />
+    <axis
+      xyz="0 0 1" />
+	</joint>
+
 	
 	<!-- ***************** -->
 	<!-- Global parameters -->
