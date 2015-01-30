@@ -113,7 +113,7 @@
 	  <parent link="link23_rb1_arm" />	
       <child link="link34_rb1_arm" />
       <axis xyz="1 0 0" />
-      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/2}" lower="${-PI/2}"/>
+      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI}" lower="${-PI}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
     
@@ -136,7 +136,7 @@
 	  <parent link="link34_rb1_arm" />	
       <child link="link45_rb1_arm" />
       <axis xyz="0 0 -1" />
-      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/2}" lower="${-PI/2}"/>
+      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${2.0}" lower="${-2.0}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
     
@@ -159,7 +159,7 @@
 	  <parent link="link45_rb1_arm" />	
       <child link="link56_rb1_arm" />
       <axis xyz="1 0 0" />
-      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/2}" lower="${-PI/2}"/>
+      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI}" lower="${-PI}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
     
@@ -182,7 +182,7 @@
 	  <parent link="link56_rb1_arm" />	
       <child link="link67_rb1_arm" />
       <axis xyz="0 0 -1" />
-      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/2}" lower="${-PI/2}"/>
+      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${2.0}" lower="${-2.0}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
     
@@ -198,16 +198,16 @@
     
     <link name="end_effector_rb1_arm">
 	    <visual>
-		  <origin xyz="0 0 0" rpy="0 0 0" />
+		  <origin xyz="0 0 0.030" rpy="0 0 0" />
 		  <geometry>
-			<cylinder length="0.010" radius="0.025"/>
+			<cylinder length="0.010" radius="0.015"/>
 		  </geometry>
 		</visual>
 
 		<collision>
 		  <origin xyz="0 0 0" rpy="0 0 0" />
 		  <geometry>
-			<cylinder length="0.010" radius="0.025"/>
+			<cylinder length="0.005" radius="0.025"/>
 		  </geometry>
 		</collision>
 
@@ -230,7 +230,7 @@
 	  <parent link="link67_rb1_arm" />	
       <child link="end_effector_rb1_arm" />
       <axis xyz="0 0 -1" />
-      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/2}" lower="${-PI/2}"/>
+      <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI}" lower="${-PI}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
     
