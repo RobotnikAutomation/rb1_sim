@@ -23,7 +23,7 @@ generate_messages(
 )
 
 catkin_package(
-  INCLUDE_DIRS include
+#  INCLUDE_DIRS include
 #  LIBRARIES rb1_arm_joystick
 #  CATKIN_DEPENDS message_runtime
 #  DEPENDS system_lib
@@ -34,7 +34,7 @@ catkin_package(
 ###########
 
 include_directories(
-  include
+#  include
   ${catkin_INCLUDE_DIRS}
 )
 
