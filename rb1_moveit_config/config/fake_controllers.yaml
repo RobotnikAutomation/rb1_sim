@@ -1,0 +1,20 @@
+controller_list:
+  - name: fake_rb1_arm_controller
+    joints:
+      - j1
+      - j2
+      - j3
+      - j4
+      - j5
+      - j6
+      - j7
+  - name: fake_rb1_arm_torso_controller
+    joints:
+      - j1_torso
+      - j1
+      - j2
+      - j3
+      - j4
+      - j5
+      - j6
+      - j7
