@@ -18,3 +18,11 @@ controller_list:
       - j5
       - j6
       - j7
+  - name: fake_rb1_gripper_controller
+    joints:
+      - jg1
+      - jg2
+  - name: fake_rb1_head_controller
+    joints:
+      - j1_head
+      - j2_head

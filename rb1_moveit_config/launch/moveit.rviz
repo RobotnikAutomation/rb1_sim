@@ -5,8 +5,10 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-      Splitter Ratio: 0.419643
-    Tree Height: 437
+        - /MotionPlanning1/Scene Robot1
+        - /MotionPlanning1/Planning Request1
+      Splitter Ratio: 0.522321
+    Tree Height: 139
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -14,6 +16,9 @@ Panels:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
+  - Class: rviz_plugin_tutorials/Teleop
+    Name: Teleop
+    Topic: ""
 Visualization Manager:
   Class: ""
   Displays:
@@ -56,6 +61,11 @@ Visualization Manager:
             Show Trail: false
             Value: true
           base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          base_link_gripper:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -144,6 +154,16 @@ Visualization Manager:
             Show Trail: false
             Value: true
           link67_rb1_arm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_finger1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_finger2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -242,9 +262,9 @@ Visualization Manager:
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
         Goal State Color: 250; 128; 0
-        Interactive Marker Size: 0
+        Interactive Marker Size: 0.2
         Joint Violation Color: 255; 0; 255
-        Planning Group: rb1_arm
+        Planning Group: rb1_head
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -273,6 +293,11 @@ Visualization Manager:
             Show Trail: false
             Value: true
           base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          base_link_gripper:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -361,6 +386,16 @@ Visualization Manager:
             Show Trail: false
             Value: true
           link67_rb1_arm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_finger1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_finger2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -460,22 +495,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 3.06803
+      Distance: 2.32049
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.218893
-        Y: 0.34614
+        X: 0.113567
+        Y: 0.10592
         Z: 2.23518e-07
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.589797
+      Pitch: 0.509797
       Target Frame: base_footprint
       Value: XYOrbit (rviz)
-      Yaw: 4.87994
+      Yaw: 5.65995
     Saved: ~
 Window Geometry:
   Displays:
@@ -487,9 +522,11 @@ Window Geometry:
   Hide Right Dock: false
   Motion Planning:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003dafc0200000005fb000000100044006900730070006c00610079007301000000280000024a000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e006701000002780000018a0000017400ffffff00000497000003da00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003dafc0200000006fb000000100044006900730070006c006100790073010000002800000120000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e0067010000014e000001ce0000017400fffffffb0000000c00540065006c0065006f00700100000322000000e00000004900ffffff00000497000003da00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Teleop:
+    collapsed: false
   Views:
     collapsed: false
   Width: 1855
-  X: 65
-  Y: 24
+  X: 57
+  Y: -4
