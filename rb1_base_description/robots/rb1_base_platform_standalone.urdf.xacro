@@ -8,9 +8,18 @@
 	
 	<!-- First we import all posible elements defined in the urdf.xacro files. All these elements are defined as macro:xacros -->
 
-	<!-- Import RB1 base elements -->
+	<!-- Import RB1 base elements -->    
     <xacro:include filename="$(find rb1_base_description)/urdf/bases/rb1_base.urdf.xacro" />
-	
+    
+    <gazebo>
+      <plugin name="ros_control" filename="libgazebo_ros_control.so">		
+        <robotNamespace>/rb1</robotNamespace>
+        <robotParam>robot_description</robotParam>
+        <controlPeriod>0.001</controlPeriod> 
+	    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      </plugin>
+    </gazebo>
+    	
 	<!-- Import RB1 wheels -->
 	<xacro:include filename="$(find rb1_base_description)/urdf/wheels/rubber_wheel.urdf.xacro" />	
 	<xacro:include filename="$(find rb1_base_description)/urdf/wheels/omni_wheel.urdf.xacro" />

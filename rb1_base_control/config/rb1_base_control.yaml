@@ -1,9 +1,10 @@
-rb1_base:
+rb1:
   joint_left_velocity_controller:
 #    type: velocity_controllers/JointVelocityController
     type: effort_controllers/JointEffortController
     joint: joint_left_wheel
     pid: {p: 100.0, i: 0.01, d: 10.0}
+
   joint_right_velocity_controller:
     type: effort_controllers/JointEffortController
     joint: joint_right_wheel
