@@ -17,7 +17,7 @@
 	<xacro:include filename="$(find rb1_arm_description)/robots/rb1_arm.urdf.xacro" />
 
 	<!-- Gazebo ros control plugins -->
-	<xacro:ros_control/>
+	<!-- xacro:ros_control/ -->
 
 	<!-- Fix torso to base -->
 	<joint
