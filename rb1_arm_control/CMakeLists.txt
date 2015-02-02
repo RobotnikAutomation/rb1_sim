@@ -6,9 +6,11 @@ project(rb1_arm_control)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rb1_arm_description
-  rb1_arm_joystick
+  rb1_arm_joystick  
   std_msgs
   std_srvs
+  controller_manager
+  controller_manager_msgs
 )
 
 ## System dependencies are found with CMake's conventions

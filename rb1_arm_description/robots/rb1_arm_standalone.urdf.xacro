@@ -16,6 +16,7 @@
 
 	<!-- Import RB1 arm elements -->
 	<xacro:include filename="$(find rb1_arm_description)/urdf/arms/rb1_arm_7dof.urdf.xacro" />
+	<xacro:include filename="$(find rb1_arm_description)/urdf/arms/rb1_arm_7dof.gazebo.xacro" />
 
 	<xacro:include filename="$(find rb1_arm_description)/urdf/grippers/two_finger_gripper.urdf.xacro" />
 

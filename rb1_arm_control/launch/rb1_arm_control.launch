@@ -3,7 +3,7 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/rb1_arm" args="--namespace=/rb1_arm
+    output="screen" ns="/rb1" args="--namespace=/rb1
                       j1_position_controller
                       j2_position_controller
                       j3_position_controller
@@ -21,7 +21,7 @@
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
     respawn="false" output="screen">
-    <remap from="/joint_states" to="/rb1_arm/joint_states" />
+    <remap from="/joint_states" to="/rb1/joint_states" />
   </node>
 
 </launch>

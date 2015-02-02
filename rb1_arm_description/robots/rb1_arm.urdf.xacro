@@ -43,6 +43,6 @@
 	<xacro:rb1_arm_7dof name="rb1_arm_7dof" hq="${hq}" />
 
 	<!-- Gazebo ros control plugins -->
-	<xacro:ros_control/>
+	<!-- xacro:ros_control/ -->
 
 </robot>

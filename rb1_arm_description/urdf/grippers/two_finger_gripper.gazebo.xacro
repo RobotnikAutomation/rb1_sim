@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <robot>
 
-  <gazebo>
+  <!-- gazebo>
     <plugin name="ros_control" filename="libgazebo_ros_control.so">
-       <robotNamespace>/terabot</robotNamespace>
+       <robotNamespace>/rb1_gripper</robotNamespace>
        <controlPeriod>0.002</controlPeriod>
 	   <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
-  </gazebo>
+  </gazebo -->
 
   <gazebo reference="base_link_gripper">
     <material>Gazebo/Grey</material>

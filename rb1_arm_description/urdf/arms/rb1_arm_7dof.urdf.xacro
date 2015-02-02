@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="rb1_arm_7dof" xmlns:xacro="http://www.ros.org/wiki/xacro"> 
 
-  <xacro:include filename="$(find rb1_arm_description)/urdf/arms/rb1_arm_7dof.gazebo.xacro" />
+  <!-- xacro:include filename="$(find rb1_arm_description)/urdf/arms/rb1_arm_7dof.gazebo.xacro" / -->
 
   <xacro:include filename="$(find rb1_arm_description)/urdf/links/rb1_arm_link.urdf.xacro" />
 
