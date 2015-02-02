@@ -1,4 +1,4 @@
-rb1_torso:
+rb1:
   j1_torso_controller:
     type: effort_controllers/JointPositionController    
     joint: j1_torso

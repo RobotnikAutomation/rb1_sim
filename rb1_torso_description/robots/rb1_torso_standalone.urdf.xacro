@@ -8,6 +8,8 @@
 
 	<!-- Import RB1 arm elements -->
 	<xacro:include filename="$(find rb1_torso_description)/urdf/rb1_torso_3dof.urdf.xacro" />
+	
+	<xacro:include filename="$(find rb1_torso_description)/urdf/rb1_torso_3dof.gazebo.xacro" />
 
 	<!-- Import all available sensors -->
 	<xacro:include filename="$(find rb1_torso_description)/urdf/sensors/all_sensors.urdf.xacro" />
