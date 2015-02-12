@@ -34,9 +34,9 @@
     
 	  <gazebo>
 	    <plugin name="ros_imu" filename="libgazebo_ros_imu.so">
-	       <topicName>imu_data</topicName>
+	       <topicName>rb1/imu_data</topicName>
 				 <bodyName>imu_link</bodyName>
-				 <serviceName>imu_service</serviceName>
+				 <serviceName>rb1/imu_service</serviceName>
 	       <gaussianNoise>0.005</gaussianNoise>		
 	    </plugin>
 	  </gazebo>

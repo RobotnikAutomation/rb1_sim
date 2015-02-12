@@ -121,7 +121,7 @@
           </clip>
         </camera>
         <plugin name="kinect_cam_controller" filename="libgazebo_ros_openni_kinect.so">
-          <cameraName>${name}</cameraName>
+          <cameraName>rb1/${name}</cameraName>
           <alwaysOn>true</alwaysOn>
           <updateRate>10</updateRate>
           <imageTopicName>rgb/image_raw</imageTopicName>
