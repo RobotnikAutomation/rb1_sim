@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- Launch for the trajectory simulation -->
+<launch>
+	
+	
+    <!-- Configuration of every interface -->
+    <rosparam command="load" file="$(find rb1_sim_bringup)/config/robotnik_trajectory_control/gazebo_interfaces.yaml" />
+    <!-- Combine joint values -->
+	<node name="rt_traj_exe" pkg="robotnik_trajectory_control" type="rt_traj_exe.py" output="screen">
+		<remap from="joint_states" to="/rb1/joint_states"/>
+		<param name="error_joint_position" value="0.009"/>
+	</node>
+	
+</launch> 
