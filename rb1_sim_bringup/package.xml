@@ -3,16 +3,9 @@
   <name>rb1_sim_bringup</name>
   <version>0.1.0</version>
   <description>The rb1_bringup package</description>
-
-  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
-  <!-- Example:  -->
-  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+  
   <maintainer email="rnavarro@robotnik.es">Román Navarro</maintainer>
 
-
-  <!-- One license tag required, multiple allowed, one license per tag -->
-  <!-- Commonly used license strings: -->
-  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
   <license>BSD</license>
 
 
@@ -40,7 +33,7 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-
+  <run_depend>robotnik_trajectory_control</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
