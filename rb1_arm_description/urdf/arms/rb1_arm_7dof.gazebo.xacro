@@ -11,6 +11,46 @@
 	    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
       </plugin>
     </gazebo>
+    
+    
+	<gazebo reference="base_link_rb1_arm">
+		<material>Gazebo/FlatBlack</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+  
+	<gazebo reference="link01_rb1_arm">
+		<material>Gazebo/Gray</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+	<gazebo reference="motor01_rb1_arm">
+		<material>Gazebo/Black</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+	<gazebo reference="link12_rb1_arm">
+		<material>Gazebo/Gray</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+	<gazebo reference="motor12_rb1_arm">
+		<material>Gazebo/Black</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+	<gazebo reference="link23_rb1_arm">
+		<material>Gazebo/Gray</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+	<gazebo reference="motor23_rb1_arm">
+		<material>Gazebo/Black</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+	<gazebo reference="link34_rb1_arm">
+		<material>Gazebo/Gray</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+	<gazebo reference="motor34_rb1_arm">
+		<material>Gazebo/Black</material>
+		<turnGravityOff>true</turnGravityOff>
+	</gazebo>
+
   </xacro:macro>
 	    
 </robot>
