@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="j1_pos" value="0.0"/>
+	<arg name="j2_pos" value="0.0"/>
+	<arg name="j3_pos" value="0.0"/>
+	<arg name="j4_pos" value="0.0"/>
+	<arg name="j5_pos" value="0.0"/>
+	<arg name="j6_pos" value="0.0"/>
+	<arg name="j7_pos" value="0.0"/>
+	<arg name="jg1_pos" value="-1.0"/>
+	<arg name="jg2_pos" value="-1.0"/>
+	<arg name="pub_options" value="--once"/>
+  <!-- Sets the joint value of the following joints -->
+  
+  <!-- set j1  -->
+  <node name="initial_position_j1" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/j1_position_controller/command std_msgs/Float64 'data: $(arg j1_pos)' $(arg pub_options)"
+   />
+  <!-- set j2  -->
+  <node name="initial_position_j2" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/j2_position_controller/command std_msgs/Float64 'data: $(arg j2_pos)' $(arg pub_options)"
+   />
+  <!-- set j3  -->
+  <node name="initial_position_j3" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/j3_position_controller/command std_msgs/Float64 'data: $(arg j3_pos)' $(arg pub_options)"
+   />
+  <!-- set j4  -->
+  <node name="initial_position_j4" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/j4_position_controller/command std_msgs/Float64 'data: $(arg j4_pos)' $(arg pub_options)"
+   />
+  <!-- set j5  -->
+  <node name="initial_position_j5" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/j5_position_controller/command std_msgs/Float64 'data: $(arg j5_pos)' $(arg pub_options)"
+   />
+  <!-- set j6  -->
+  <node name="initial_position_j6" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/j6_position_controller/command std_msgs/Float64 'data: $(arg j6_pos)' $(arg pub_options)"
+   />
+  <!-- set j7  -->
+  <node name="initial_position_j7" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/j7_position_controller/command std_msgs/Float64 'data: $(arg j7_pos)' $(arg pub_options)"
+   />
+  <!-- set jg1  -->
+  <node name="initial_position_jg1" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/jg1_position_controller/command std_msgs/Float64 'data: $(arg jg1_pos)' $(arg pub_options)"
+   />
+  <!-- set jg2  -->
+  <node name="initial_position_jg2" pkg="rostopic" type="rostopic" respawn="false"
+    output="screen"  args="pub /rb1/jg2_position_controller/command std_msgs/Float64 'data: $(arg jg2_pos)' $(arg pub_options)"
+   />
+
+
+</launch>
+
+ 
