@@ -20,6 +20,8 @@
                       j5_position_controller
                       j6_position_controller
                       j7_position_controller
+                      jg1_position_controller
+                      jg2_position_controller
                       "/>                      
                         
   <!-- once the joint_state is published, run the robot_state_publisher, the namespace has to be adapted --> 
