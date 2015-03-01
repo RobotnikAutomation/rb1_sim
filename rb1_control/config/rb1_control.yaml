@@ -8,12 +8,12 @@ rb1:
 #    type: velocity_controllers/JointVelocityController
     type: effort_controllers/JointEffortController
     joint: joint_left_wheel
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 0.01, d: 10.0}
 
   joint_right_velocity_controller:
     type: effort_controllers/JointEffortController
     joint: joint_right_wheel
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 200.0, i: 0.01, d: 10.0}
 
 #rb1_torso:
   j1_torso_controller:
