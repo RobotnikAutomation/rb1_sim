@@ -12,17 +12,46 @@
   <gazebo reference="base_footprint">
     <material>Gazebo/Green</material>
   </gazebo>
-  <xacro:rb1_base hq="true" name="rb1_base" publish_bf="true"/>
-  <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="ros_control">
-      <robotNamespace>/rb1_arm</robotNamespace>
-      <!-- robotNamespace>/rb1</robotNamespace -->
-      <robotParam>robot_description</robotParam>
-      <controlPeriod>0.001</controlPeriod>
-      <!-- controlPeriod>0.003</controlPeriod -->
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    </plugin>
-  </gazebo>
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="wheel_width" value="0.175"/>
+  <link name="base_footprint">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_footprint_joint" type="fixed">
+    <!-- origin xyz="0 0 ${wheel_radius}" rpy="0 0 0" / -->
+    <origin rpy="0 0 0" xyz="0 0 0.025"/>
+    <!-- origin xyz="0 0 0.025" rpy="0 0 0" / -->
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+  <link name="base_link">
+    <inertial>
+      <mass value="25.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rb1_base_description/meshes/bases/rb1_base.dae"/>
+      </geometry>
+      <material name="darkgrey">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rb1_base_description/meshes/bases/rb1_base.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <xacro:ros_control/>
   <gazebo>
     <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
       <alwaysOn>true</alwaysOn>
@@ -678,24 +707,7 @@
       </plugin>
     </sensor>
   </gazebo>
-  <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="ros_control">
-      <robotNamespace>/rb1_arm</robotNamespace>
-      <!-- robotNamespace>/rb1</robotNamespace -->
-      <robotParam>robot_description</robotParam>
-      <controlPeriod>0.001</controlPeriod>
-      <!-- controlPeriod>0.003</controlPeriod -->
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    </plugin>
-  </gazebo>
   <!-- Import RB1 arm -->
-  <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="ros_control">
-      <robotNamespace>/rb1_gripper</robotNamespace>
-      <controlPeriod>0.002</controlPeriod>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    </plugin>
-  </gazebo>
   <gazebo reference="base_link_gripper">
     <material>Gazebo/Grey</material>
   </gazebo>
@@ -1309,18 +1321,16 @@
       <motorTorqueConstant>3.0</motorTorqueConstant>
     </actuator>
   </transmission>
+  <!-- Gazebo ros control plugins -->
+  <!-- xacro:ros_control/ -->
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="ros_control">
-      <robotNamespace>/rb1_arm</robotNamespace>
-      <!-- robotNamespace>/rb1</robotNamespace -->
+      <robotNamespace>/rb1</robotNamespace>
       <robotParam>robot_description</robotParam>
       <controlPeriod>0.001</controlPeriod>
-      <!-- controlPeriod>0.003</controlPeriod -->
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
   </gazebo>
-  <!-- Gazebo ros control plugins -->
-  <!-- xacro:ros_control/ -->
   <!-- Fix torso to base -->
   <joint name="j_base_torso" type="fixed">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
