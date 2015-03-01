@@ -9,7 +9,7 @@
   <!-- robotnik trajectory control -->
   <include file="$(find rb1_sim_bringup)/launch/robotnik_traj_control/gazebo_trajectory_control.launch" />
   <!-- Moveit config -->
-  <include file="$(find rb1_moveit_config_2)/launch/demo_rtc.launch">
+  <include file="$(find rb1_moveit_config)/launch/demo_rtc.launch">
 	  <arg name="simulation" value="$(arg simulation)"/>
   </include>
   <!-- Sets the initial value of the joints  -->
