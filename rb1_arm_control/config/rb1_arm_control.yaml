@@ -1,5 +1,7 @@
 rb1:
-#rb1_arm:
+  joint_read_state_controller:
+    type: joint_state_controller/JointStateController 
+    publish_rate: 50.0
 
   j1_position_controller:
     type: effort_controllers/JointPositionController
@@ -34,18 +36,17 @@ rb1:
   j7_position_controller:
     type: effort_controllers/JointPositionController
     joint: j7
-    pid: {p: 9000.0, i: 10, d: 5.0}
-    
-  jg1_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: jg1
-    pid: {p: 100.0, i: 0.1, d: 0.1}
+    pid: {p: 7000.0, i: 200, d: 1.0}
     
   jg2_position_controller:
     type: effort_controllers/JointPositionController
     joint: jg2
     pid: {p: 100.0, i: 0.1, d: 0.1}
 
-  joint_read_state_controller:
-    type: joint_state_controller/JointStateController 
-    publish_rate: 100.0
+
+#  gripper_position_controller:
+#    type: effort_controllers/JointPositionController
+#    joint: j1_gripper
+#    pid: {p: 100.0, i: 0.1, d: 10.0}
+
+
