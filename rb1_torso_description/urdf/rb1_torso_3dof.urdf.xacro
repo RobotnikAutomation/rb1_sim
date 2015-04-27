@@ -217,7 +217,9 @@
       rpy="0.0 0.0 0.0" />
 	<parent link="link1_head" />	
     <child link="link2_head" />
-    <axis xyz="0 1 0" />
+    <!-- check -->
+    <!-- axis xyz="0 1 0" / -->
+    <axis xyz="0 -1 0"/>
     <limit effort="${joint_effort_limit}" velocity="${joint_velocity_limit}" upper="${PI/4}" lower="${-PI/4}"/>
     <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
   </joint>

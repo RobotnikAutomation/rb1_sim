@@ -231,7 +231,7 @@
 			rpy="0.0 0.0 0.0" />
 		<parent link="link01_rb1_arm" />	
 		<child link="link12_rb1_arm" />
-		<axis xyz="0 0 -1" />
+		<axis xyz="0 0 1" />
 		<limit effort="${joint_effort_limit_H54_200}" velocity="${joint_velocity_limit_H54_200}" upper="${j1_upper_limit}" lower="${j1_lower_limit}"/>
 		<dynamics damping="${joint_damping}" friction="${joint_friction}"/>
 	</joint>
@@ -331,7 +331,9 @@
         rpy="${PI/2} 0.0 0.0" />
 	  <parent link="link12_rb1_arm" />	
       <child link="link23_rb1_arm" />
-      <axis xyz="0 0 -1" />
+      <!-- check -->
+      <!-- axis xyz="0 0 -1" / -->
+      <axis xyz="0 0 1"/>
       <limit effort="${joint_effort_limit_H54_200}" velocity="${joint_velocity_limit_H54_200}" upper="${j2_upper_limit}" lower="${j2_lower_limit}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
@@ -529,7 +531,9 @@
         rpy="0.0 0.0 0.0" />
 	  <parent link="link34_rb1_arm" />	
       <child link="link45_rb1_arm" />
-      <axis xyz="0 0 -1" />
+      <!-- check -->
+      <!-- xis xyz="0 0 -1" / -->
+      <axis xyz="0 0 1"/>
       <limit effort="${joint_effort_limit_H54_100}" velocity="${joint_velocity_limit_H54_100}" upper="${j4_upper_limit}" lower="${j4_lower_limit}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
@@ -729,7 +733,9 @@
         rpy="0.0 0.0 0.0" />
 	  <parent link="link56_rb1_arm" />	
       <child link="link67_rb1_arm" />
-      <axis xyz="0 0 -1" />
+      <!-- check -->
+      <!-- axis xyz="0 0 -1" / -->
+      <axis xyz="0 0 1"/>
       <limit effort="${joint_effort_limit_L42}" velocity="${joint_velocity_limit_L42}" upper="${j6_upper_limit}" lower="${j6_lower_limit}"/>
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
@@ -750,7 +756,7 @@
 	<joint name="j7" type="revolute">
 	  <origin
         xyz="0 0 0"        
-        rpy="0.0 0.0 0.0" />
+        rpy="1.5708 0.0 0.0" />
 	  <parent link="link67_rb1_arm" />	
       <child link="end_effector_rb1_arm" />
       <axis xyz="1 0 0" />
