@@ -20,7 +20,6 @@ controller_list:
       - j7
   - name: fake_rb1_gripper_controller
     joints:
-      - jg1
       - jg2
   - name: fake_rb1_head_controller
     joints:
