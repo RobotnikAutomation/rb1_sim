@@ -25,3 +25,16 @@ controller_list:
     joints:
       - j1_head
       - j2_head
+  - name: fake_rb1_robot_controller
+    joints:
+      - j1_torso
+      - j1_head
+      - j2_head
+      - j1
+      - j2
+      - j3
+      - j4
+      - j5
+      - j6
+      - j7
+      - jg2
