@@ -80,13 +80,13 @@
 	</xacro:omni_wheel>
 
 	<!-- SENSORS -->    
-	<xacro:sensor_hokuyo_utm30lx name="hokuyo" parent="base_link">
+	<!-- xacro:sensor_hokuyo_utm30lx name="hokuyo" parent="base_link">
 		<origin xyz="0.210 0.0 0.305" rpy="0 0 0"/>
-	</xacro:sensor_hokuyo_utm30lx>
+	</xacro:sensor_hokuyo_utm30lx -->
 
-    <xacro:sensor_hokuyo_urg04lx name="hokuyo1" parent="base_link">
-        <origin xyz="0.220 0.0 0.170" rpy="0 3.1416 3.1416"/>
-    </xacro:sensor_hokuyo_urg04lx>
+        <xacro:sensor_hokuyo_urg04lx name="hokuyo" parent="base_link">
+           <origin xyz="0.220 0.0 0.170" rpy="0 3.1416 3.1416"/>
+        </xacro:sensor_hokuyo_urg04lx>
 
     
 	<xacro:sensor_imu name="imu" parent="base_link">
