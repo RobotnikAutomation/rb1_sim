@@ -106,7 +106,6 @@
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="base_footprint" link2="base_link" reason="Adjacent" />
     <disable_collisions link1="base_footprint" link2="base_link_gripper" reason="Never" />
-    <disable_collisions link1="base_footprint" link2="hokuyo1_laser_link" reason="Never" />
     <disable_collisions link1="base_footprint" link2="hokuyo_laser_link" reason="Never" />
     <disable_collisions link1="base_footprint" link2="imu_link" reason="Never" />
     <disable_collisions link1="base_footprint" link2="left_wheel" reason="Never" />
@@ -135,7 +134,6 @@
     <disable_collisions link1="base_footprint" link2="omni_front_right_wheel" reason="Never" />
     <disable_collisions link1="base_footprint" link2="right_wheel" reason="Never" />
     <disable_collisions link1="base_footprint" link2="xtion_head_cam_link" reason="Never" />
-    <disable_collisions link1="base_link" link2="hokuyo1_laser_link" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="hokuyo_laser_link" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="imu_link" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="left_wheel" reason="Adjacent" />
@@ -174,26 +172,6 @@
     <disable_collisions link1="base_link_gripper" link2="motor56_rb1_arm" reason="Never" />
     <disable_collisions link1="base_link_gripper" link2="motor67_rb1_arm" reason="Never" />
     <disable_collisions link1="base_link_gripper" link2="omni_back_wheel" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="hokuyo_laser_link" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="imu_link" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="left_wheel" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link01_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link12_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link1_head" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link1_torso" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link23_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link2_head" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link2_torso" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="link34_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="motor01_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="motor12_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="motor23_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="motor34_rb1_arm" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="omni_back_wheel" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="omni_front_left_wheel" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="omni_front_right_wheel" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="right_wheel" reason="Never" />
-    <disable_collisions link1="hokuyo1_laser_link" link2="xtion_head_cam_link" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="imu_link" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="left_wheel" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="link01_rb1_arm" reason="Never" />
@@ -203,9 +181,11 @@
     <disable_collisions link1="hokuyo_laser_link" link2="link23_rb1_arm" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="link2_head" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="link2_torso" reason="Never" />
+    <disable_collisions link1="hokuyo_laser_link" link2="link34_rb1_arm" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="motor01_rb1_arm" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="motor12_rb1_arm" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="motor23_rb1_arm" reason="Never" />
+    <disable_collisions link1="hokuyo_laser_link" link2="motor34_rb1_arm" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="omni_back_wheel" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="omni_front_left_wheel" reason="Never" />
     <disable_collisions link1="hokuyo_laser_link" link2="omni_front_right_wheel" reason="Never" />
@@ -320,10 +300,12 @@
     <disable_collisions link1="link1_torso" link2="link2_head" reason="Never" />
     <disable_collisions link1="link1_torso" link2="link2_torso" reason="Adjacent" />
     <disable_collisions link1="link1_torso" link2="link34_rb1_arm" reason="Never" />
+    <disable_collisions link1="link1_torso" link2="link45_rb1_arm" reason="Never" />
     <disable_collisions link1="link1_torso" link2="motor01_rb1_arm" reason="Never" />
     <disable_collisions link1="link1_torso" link2="motor12_rb1_arm" reason="Never" />
     <disable_collisions link1="link1_torso" link2="motor23_rb1_arm" reason="Never" />
     <disable_collisions link1="link1_torso" link2="motor34_rb1_arm" reason="Never" />
+    <disable_collisions link1="link1_torso" link2="motor45_rb1_arm" reason="Never" />
     <disable_collisions link1="link1_torso" link2="omni_back_wheel" reason="Never" />
     <disable_collisions link1="link1_torso" link2="omni_front_left_wheel" reason="Never" />
     <disable_collisions link1="link1_torso" link2="omni_front_right_wheel" reason="Never" />
@@ -409,7 +391,7 @@
     <disable_collisions link1="link56_rb1_arm" link2="motor56_rb1_arm" reason="Adjacent" />
     <disable_collisions link1="link56_rb1_arm" link2="motor67_rb1_arm" reason="Never" />
     <disable_collisions link1="link56_rb1_arm" link2="omni_back_wheel" reason="Never" />
-    <disable_collisions link1="link56_rb1_arm" link2="omni_front_right_wheel" reason="Never" />
+    <disable_collisions link1="link56_rb1_arm" link2="omni_front_left_wheel" reason="Never" />
     <disable_collisions link1="link67_rb1_arm" link2="link_finger1" reason="Never" />
     <disable_collisions link1="link67_rb1_arm" link2="motor01_rb1_arm" reason="Never" />
     <disable_collisions link1="link67_rb1_arm" link2="motor12_rb1_arm" reason="Never" />
@@ -419,6 +401,7 @@
     <disable_collisions link1="link67_rb1_arm" link2="motor56_rb1_arm" reason="Never" />
     <disable_collisions link1="link67_rb1_arm" link2="motor67_rb1_arm" reason="Adjacent" />
     <disable_collisions link1="link67_rb1_arm" link2="omni_back_wheel" reason="Never" />
+    <disable_collisions link1="link67_rb1_arm" link2="omni_front_left_wheel" reason="Never" />
     <disable_collisions link1="link_finger1" link2="link_finger2" reason="Default" />
     <disable_collisions link1="link_finger1" link2="motor01_rb1_arm" reason="Never" />
     <disable_collisions link1="link_finger1" link2="motor12_rb1_arm" reason="Never" />
@@ -485,6 +468,7 @@
     <disable_collisions link1="motor56_rb1_arm" link2="omni_front_right_wheel" reason="Never" />
     <disable_collisions link1="motor56_rb1_arm" link2="right_wheel" reason="Never" />
     <disable_collisions link1="motor67_rb1_arm" link2="omni_back_wheel" reason="Never" />
+    <disable_collisions link1="motor67_rb1_arm" link2="omni_front_left_wheel" reason="Never" />
     <disable_collisions link1="omni_back_wheel" link2="omni_front_left_wheel" reason="Never" />
     <disable_collisions link1="omni_back_wheel" link2="omni_front_right_wheel" reason="Never" />
     <disable_collisions link1="omni_back_wheel" link2="right_wheel" reason="Never" />
