@@ -18,18 +18,18 @@
 	<xacro:property name="j7_mechanical_reduction" value="304.0"/>
 	<xacro:property name="j7_motor_torque_constant" value="3.0"/>
 	
-	<xacro:property name="j1_lower_limit" value="-1.570796327"/> 
-	<xacro:property name="j1_upper_limit" value="1.570796327"/> 
-	<xacro:property name="j2_lower_limit" value="-1.570796327"/> 
-	<xacro:property name="j2_upper_limit" value="1.570796327"/> 
+	<xacro:property name="j1_lower_limit" value="-1.55"/> 
+	<xacro:property name="j1_upper_limit" value="1.55"/> 
+	<xacro:property name="j2_lower_limit" value="-1.95"/> 
+	<xacro:property name="j2_upper_limit" value="1.55"/> 
 	<xacro:property name="j3_lower_limit" value="-3.13"/> 
 	<xacro:property name="j3_upper_limit" value="3.13"/> 
-	<xacro:property name="j4_lower_limit" value="-1.570796327"/> 
-	<xacro:property name="j4_upper_limit" value="1.570796327"/> 
+	<xacro:property name="j4_lower_limit" value="-1.95"/> 
+	<xacro:property name="j4_upper_limit" value="1.95"/> 
 	<xacro:property name="j5_lower_limit" value="-3.13"/> 
 	<xacro:property name="j5_upper_limit" value="3.13"/> 
-	<xacro:property name="j6_lower_limit" value="-1.570796327"/> 
-	<xacro:property name="j6_upper_limit" value="1.570796327"/> 
+	<xacro:property name="j6_lower_limit" value="-1.57"/> 
+	<xacro:property name="j6_upper_limit" value="1.57"/> 
 	<xacro:property name="j7_lower_limit" value="-3.13"/> 
 	<xacro:property name="j7_upper_limit" value="3.13"/> 
 
