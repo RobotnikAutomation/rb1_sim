@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<remap from="/joint_states" to="/rb1/joint_states" />
+	<node name="rt_traj_planner" pkg="robotnik_trajectory_planner" type="robotnik_trajectory_planner_node" output="screen">
+		<rosparam command="load" file="$(find rb1_moveit_config)/config/kinematics.yaml"/>
+		<rosparam command="load" file="$(find rb1_sim_bringup)/config/robotnik_traj_planner/rt_traj_planner.yaml"/>
+	</node>
+
+</launch>
+
