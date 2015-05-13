@@ -6,7 +6,7 @@
   <xacro:property name="joint_effort_limit" value="100.0"/>
   <xacro:property name="joint_velocity_limit" value="3.0"/>
   <xacro:property name="joint_effort_limit_torso" value="5000.0"/>
-  <xacro:property name="joint_velocity_limit_torso" value="1.0"/>
+  <xacro:property name="joint_velocity_limit_torso" value="0.05"/>
   <xacro:property name="joint_damping" value="0.5"/>
   <xacro:property name="joint_friction" value="0.5"/>
 
