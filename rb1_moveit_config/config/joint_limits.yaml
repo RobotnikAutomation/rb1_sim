@@ -1,12 +1,12 @@
 joint_limits:
   j1:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   j3:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   j1_head:
@@ -21,7 +21,7 @@ joint_limits:
     max_acceleration: 0
   j2:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   j2_head:
@@ -31,26 +31,26 @@ joint_limits:
     max_acceleration: 0
   j5:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   j6:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   j7:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   j4:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   jg2:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
