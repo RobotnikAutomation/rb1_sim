@@ -4,7 +4,10 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Status1
+        - /Grid1
         - /TF1/Frames1
+        - /InteractiveMarkers1
       Splitter Ratio: 0.660592
     Tree Height: 537
   - Class: rviz/Selection
@@ -44,7 +47,7 @@ Visualization Manager:
         Y: 0
         Z: 0
       Plane: XY
-      Plane Cell Count: 10
+      Plane Cell Count: 40
       Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 1
@@ -57,16 +60,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        back_left_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        back_right_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         base_footprint:
           Alpha: 1
           Show Axes: false
@@ -77,50 +70,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        camera_pan_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        camera_tilt_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        cover_back_left1_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        cover_back_right1_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        cover_front_left1_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        cover_front_right1_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        front_left_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        front_right_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        gps_link:
+        hokuyo1_laser_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -131,6 +81,31 @@ Visualization Manager:
           Show Trail: false
           Value: true
         imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        omni_back_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        omni_front_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        omni_front_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -236,6 +211,15 @@ Visualization Manager:
       Name: Obstacle Footprint
       Topic: /move_base/local_costmap/obstacle_layer_footprint/footprint_stamped
       Value: true
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: true
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /path_marker/update
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -260,22 +244,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10.7925
+      Distance: 6.35421
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.180403
-        Y: -0.490386
-        Z: 0.556832
+        X: 1.61196
+        Y: -0.794088
+        Z: 1.41062
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.5648
+      Pitch: 0.929799
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.13861
+      Yaw: 5.36861
     Saved: ~
 Window Geometry:
   Displays:
@@ -293,5 +277,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1273
-  X: 293
-  Y: 79
+  X: 268
+  Y: 128
