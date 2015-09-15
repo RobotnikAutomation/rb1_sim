@@ -18,7 +18,7 @@
   <!-- If needed, broadcast static tf for robot root -->
     <!-- node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 odom_combined base_footprint 100" / -->
   <node if="$(arg simulation)" pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_1" args="0 0 0 0 0 0 odom odom_combined 100" />
-  <node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_2" args="0 0 0 0 0 0 base_link_gripper link_finger2 100" />
+  <!--node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_2" args="0 0 0 0 0 0 base_link_gripper link_finger2 100" /-->
 
   <!-- Given the published joint states, publish tf for the robot links -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
