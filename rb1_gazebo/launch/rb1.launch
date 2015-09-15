@@ -7,6 +7,7 @@
 
   <!-- rb1_base_control launch file -->
   <include file="$(find rb1_control)/launch/rb1_control.launch" />
+  <!--include file="$(find rb1_control)/launch/rb1_control_velocity.launch" /-->
 
   <!-- rb1_base_joystick launch file -->
   <!-- include file="$(find rb1_base_joystick)/launch/rb1_base_joystick.launch" / -->

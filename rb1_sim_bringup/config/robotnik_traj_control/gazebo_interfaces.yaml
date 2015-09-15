@@ -11,7 +11,6 @@ groups: {
  arm_j6: { name: arm_j6, type: gazebo_position, joints: [j6], command_topic: /rb1/j6_position_controller/command},
  arm_j7: { name: arm_j7, type: gazebo_position, joints: [j7], command_topic: /rb1/j7_position_controller/command},
  torso_j1: { name: torso_j1, type: gazebo_position, joints: [j1_torso], command_topic: /rb1/j1_torso_controller/command},
- gripper_j1: { name: gripper_j1, type: gazebo_position, joints: [jg1], command_topic: /rb1/jg1_position_controller/command},
  gripper_j2: { name: gripper_j2, type: gazebo_position, joints: [jg2], command_topic: /rb1/jg2_position_controller/command},
  head_j1: { name: head_j1, type: gazebo_position, joints: [j1_head], command_topic: /rb1/j1_head_controller/command},
  head_j2: { name: head_j2, type: gazebo_position, joints: [j2_head], command_topic: /rb1/j2_head_controller/command}

@@ -14,67 +14,83 @@
    </xacro:macro>
     
 	<gazebo reference="base_link_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/FlatBlack</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
   
 	<gazebo reference="link01_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="motor01_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Black</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="link12_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="motor12_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Black</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="link23_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="motor23_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Black</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="link34_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="motor34_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Black</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="link45_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="motor45_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Black</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="link56_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="motor56_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Black</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="link67_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
 	<gazebo reference="motor67_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Black</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
     <gazebo reference="end_effector_rb1_arm">
+		<selfCollide>true</selfCollide>
 		<material>Gazebo/Gray</material>
 		<turnGravityOff>false</turnGravityOff>
 	</gazebo>
