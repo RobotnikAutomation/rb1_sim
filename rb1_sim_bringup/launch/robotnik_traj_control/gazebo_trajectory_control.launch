@@ -2,14 +2,19 @@
 <!-- Launch for the trajectory simulation -->
 <launch>
 	
-    <!-- Configuration of every interface -->
-    <rosparam command="load" file="$(find rb1_sim_bringup)/config/robotnik_traj_control/gazebo_interfaces.yaml" />
-    <!-- Combine joint values -->
+	<!-- Configuration of every interface -->
+	<rosparam command="load" file="$(find rb1_sim_bringup)/config/robotnik_traj_control/gazebo_interfaces.yaml" />
+	<!-- TRAJECTORY EXECUTION NODE -->
 	<node name="rt_traj_exe" pkg="robotnik_trajectory_control" type="rt_traj_exe.py" output="screen">
 		<remap from="joint_states" to="/rb1/joint_states"/>
 		<param name="error_joint_position" value="0.009"/>
 		<!-- timeout for the recevement of joint_state values (seconds)-->
 		<param name="joint_read_state_timeout" value="0.05"/>
+	</node>
+    
+  	<!-- GRIPPER ACTIONS NODE -->
+	<node name="rt_gripper_exe" pkg="robotnik_trajectory_control" type="rt_gripper_exe.py" output="screen">
+		<rosparam command="load" file="$(find rb1_sim_bringup)/config/robotnik_traj_control/rb1_crab_gripper.yaml" />
 	</node>
 	
 </launch> 

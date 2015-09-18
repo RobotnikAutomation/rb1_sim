@@ -1,0 +1,14 @@
+# All the accepted models
+gripper_models: [ rb1_gripper1, rb1_gripper2, wsg50_gripper_gazebo ] 
+
+name: rb1_gripper_2
+model: rb1_gripper2
+joints: [jg2]
+action_service: /rt_traj_exe/follow_joint_trajectory
+min_opening: 0.0
+max_opening: 0.1
+min_opening_joint_val_f1: 0.0
+max_opening_joint_val_f1: -1.57
+
+
+
