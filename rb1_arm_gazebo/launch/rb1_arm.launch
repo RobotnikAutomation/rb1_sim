@@ -6,7 +6,7 @@
   <arg name="gui" default="true"/>
 
   <!-- rb1_base_control launch file -->
-  <include file="$(find rb1_arm_control)/launch/rb1_arm_control.launch" />
+  <!-- include file="$(find rb1_arm_control)/launch/rb1_arm_control.launch" / -->
 
   <!-- rb1_base_joystick launch file -->
   <!-- Include this file only if you wish a the control the robot via joystick, it has to be commented if you want to set goals for autonomous navigation -->
@@ -34,5 +34,6 @@
   <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
         args="-urdf -model rb1_arm_7dof -param robot_description -z 1.0"/>
+
 
 </launch>
