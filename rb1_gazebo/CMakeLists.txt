@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   rb1_arm_joystick
   rb1_base_control
   rb1_base_description
-  rb1_base_joystick
+  rb1_base_pad
   rb1_description
   rb1_torso_control
   rb1_torso_description
