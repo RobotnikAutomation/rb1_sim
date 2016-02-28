@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   rb1_arm_joystick
   rb1_base_control
   rb1_base_description
-  rb1_base_joystick
+  rb1_base_pad
   rb1_description
   rb1_torso_control
   rb1_torso_description
@@ -91,7 +91,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES rb1_gazebo
-#  CATKIN_DEPENDS rb1_arm_control rb1_arm_descrption rb1_arm_joystick rb1_base_control rb1_base_description rb1_base_joystick rb1_description rb1_torso_control rb1_torso_description std_msgs std_srvs tf
+#  CATKIN_DEPENDS rb1_arm_control rb1_arm_descrption rb1_arm_joystick rb1_base_control rb1_base_description rb1_base_pad rb1_description rb1_torso_control rb1_torso_description std_msgs std_srvs tf
 #  DEPENDS system_lib
 )
 
