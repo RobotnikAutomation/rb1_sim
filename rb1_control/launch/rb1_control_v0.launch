@@ -12,16 +12,15 @@
                       joint_right_velocity_controller                      
                       j1_torso_controller
                       j1_head_controller
-                      j2_head_controller                                                               
+                      j2_head_controller                     
                       j1_position_controller
                       j2_position_controller
                       j3_position_controller
                       j4_position_controller
                       j5_position_controller
-                      jhand_position_controller
-                      jf1_position_controller
-                      jf2_position_controller
-                      jf3_position_controller
+                      j6_position_controller
+                      j7_position_controller
+                      jg2_position_controller
                       "/>                      
                         
   <!-- once the joint_state is published, run the robot_state_publisher, the namespace has to be adapted --> 
