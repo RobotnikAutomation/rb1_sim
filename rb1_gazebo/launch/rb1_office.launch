@@ -6,19 +6,16 @@
   <arg name="gui" default="true"/>
 
   <!-- rb1_base_control launch file -->
-  <include file="$(find rb1_base_control)/launch/rb1_base_control.launch" />
-  <include file="$(find rb1_torso_control)/launch/rb1_torso_control.launch" />
-  <include file="$(find rb1_arm_control)/launch/rb1_arm_control.launch" />
-    
-  <!-- rb1_base_joy launch file -->
-  <!-- Include this file only if you wish a the control the robot via joystick, it has to be commented if you want to set goals for autonomous navigation -->
-  <!-- for this node to work correctly first you need to succesfully connect the ps3 joystick with:
-		sudo su
-		rosrun ps3joy sixpair
-		rosrun ps3joy ps3joy.py
-  -->
-  <include file="$(find rb1_base_joystick)/launch/rb1_base_joy.launch" />
-  <!-- include file="$(find rb1_base_joystick)/launch/rb1_arm_joy.launch" / -->
+  <!-- include file="$(find rb1_base_control)/launch/rb1_base_control.launch" / -->
+  <!-- include file="$(find rb1_torso_control)/launch/rb1_torso_control.launch" / -->
+  <!-- include file="$(find mico_arm_control)/launch/mico_arm_control_test.launch" / -->
+  
+  <!-- rb1_control launch file -->
+  <include file="$(find rb1_control)/launch/rb1_control.launch" />
+          
+  <!-- rb1_base_pad launch file -->
+  <include file="$(find rb1_base_pad)/launch/rb1_base_pad.launch" />
+  <remap from="/rb1/mobile_base_controller/cmd_vel" to="/rb1/cmd_vel" />
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -32,8 +29,8 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
-         command="$(find xacro)/xacro.py '$(find rb1_description)/robots/rb1_robot.urdf.xacro'" />
-         
+         command="$(find xacro)/xacro.py '$(find rb1_description)/robots/rb1_robot_mico_3fg.urdf.xacro'" />
+           
   <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
         args="-urdf -model rb1 -param robot_description"/>
