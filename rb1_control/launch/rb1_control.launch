@@ -8,11 +8,10 @@
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
     output="screen" ns="/rb1" args="--shutdown-timeout 1 --namespace=/rb1
                       joint_read_state_controller 
-                      joint_left_velocity_controller
-                      joint_right_velocity_controller                      
+                      mobile_base_controller
                       j1_torso_controller
                       j1_head_controller
-                      j2_head_controller                                                               
+                      j2_head_controller  
                       j1_position_controller
                       j2_position_controller
                       j3_position_controller
@@ -21,9 +20,24 @@
                       jhand_position_controller
                       jf1_position_controller
                       jf2_position_controller
-                      jf3_position_controller
-                      "/>                      
-                        
+                      jf3_position_controller"/>
+
+<!-- 
+                     mico_arm_controller
+                      gripper_controller
+-->
+
+<!-- 
+                      joint_left_velocity_controller
+                      joint_right_velocity_controller                      
+-->
+    
+  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+    <rosparam command="load" file="$(find rb1_base_control)/config/twist_mux.yaml" />
+    <remap from="cmd_vel_out" to="/rb1/cmd_vel"/>
+  </node>
+
+
   <!-- once the joint_state is published, run the robot_state_publisher, the namespace has to be adapted --> 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher_base" pkg="robot_state_publisher" type="robot_state_publisher"
