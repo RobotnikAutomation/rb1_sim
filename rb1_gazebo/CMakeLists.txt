@@ -5,8 +5,8 @@ project(rb1_gazebo)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  rb1_arm_control
-  rb1_arm_description
+  #rb1_arm_control
+  #rb1_arm_description
   rb1_arm_joystick
   rb1_base_control
   rb1_base_description
