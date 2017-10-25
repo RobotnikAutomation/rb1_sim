@@ -25,11 +25,12 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find rb1_description)/robots/rb1_robot_mico_3fg.urdf.xacro'" />
+  <!--<arg name="urdf_file" default="$(find xacro)/xacro.py '$(find rb1_description)/robots/rb1_robot_jaco_3fg_v3.urdf.xacro'" />-->
   <param name="robot_description" command="$(arg urdf_file)" />
 
          
   <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-urdf -model rb1 -param robot_description"/>
+        args="-urdf -model rb1 -param robot_description -j arm_joint_2 0.7"/>
 
 </launch>
