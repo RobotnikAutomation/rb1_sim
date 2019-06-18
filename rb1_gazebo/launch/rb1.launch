@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 <launch>
 
-  <!-- roslaunch arguments -->
-  <arg name="debug" default="false"/>
-  <arg name="gui" default="true"/>
+  <arg name="debug" default="false" />
+  <arg name="gui" default="true" />
+  <arg name="prefix" default="rb1_" />
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find rb1_description)/robots/rb1_robot_mico_3fg.urdf.xacro' prefix:=$(arg prefix) --inorder" />
 
   <!-- rb1_control launch file -->
   <include file="$(find rb1_control)/launch/rb1_control.launch" />
@@ -22,14 +25,8 @@
     <arg name="use_sim_time" value="true"/>
     <arg name="headless" value="false"/>
   </include>
-
-  <!-- Load the URDF into the ROS Parameter Server -->
-  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find rb1_description)/robots/rb1_robot_mico_3fg.urdf.xacro'" />
-  <param name="robot_description" command="$(arg urdf_file)" />
-
          
   <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-urdf -model rb1 -param robot_description"/>
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model rb1 -param robot_description"/>
 
 </launch>

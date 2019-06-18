@@ -6,7 +6,7 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/rb1" args="--shutdown-timeout 1 --namespace=/rb1
+    output="screen" ns="/rb1" args="--namespace=/rb1
                       joint_read_state_controller 
                       mobile_base_controller
                       j1_torso_controller
