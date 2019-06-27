@@ -15,5 +15,4 @@
   <!-- Sets the initial value of the joints  -->
   <!--include file="$(find rb1_sim_bringup)/launch/gazebo_set_position.launch" /-->
 
-
 </launch>
