@@ -14,9 +14,9 @@
 	<arg name="launch_move_base" default="false"/>
 	<arg name="launch_move" default="false"/>
 	<arg name="map_file" default="$(find rb1_base_localization)/maps/empty/empty.yaml"/>
-        <arg name="prefix" value="$(arg id_robot)_"/>
+    <arg name="prefix" value="$(arg id_robot)_"/>
 	<arg name="global_frame" default="$(arg prefix)map"/>
-        <arg name="launch_base_hw_sim" default="false"/>
+    <arg name="launch_base_hw_sim" default="false"/>
 
 	<!-- BEGIN ROBOT-->
 	<group ns="$(arg id_robot)">
