@@ -26,7 +26,8 @@
 	<arg name="amcl_and_mapserver_a" default="false"/>
 	<arg name="map_file_a" default="$(find rb1_base_localization)/maps/empty/map_empty.yaml"/>
 	<arg name="map_frame_a" default="$(arg id_robot_a)_map"/>
-	<arg name="xacro_robot_a" default="rb1_robot_jaco_3fg.urdf.xacro"/>
+	<arg name="arm_name_a" default="j2s7s300"/>
+    <arg name="xacro_robot_a" default="rb1_robot_$(arg arm_name_a).urdf.xacro"/>
     <arg name="has_elevator_robot_a" default="false"/>
     <arg name="move_robot_a" default="false"/>
 
@@ -41,7 +42,8 @@
 	<arg name="amcl_and_mapserver_b" default="false"/>
 	<arg name="map_file_b" default="$(find rb1_base_localization)/maps/empty/map_empty.yaml"/>
 	<arg name="map_frame_b" default="$(arg id_robot_b)_map"/>
-	<arg name="xacro_robot_b" default="rb1_robot_jaco_3fg.urdf.xacro"/>
+	<arg name="arm_name_b" default="j2s7s300"/>
+    <arg name="xacro_robot_b" default="rb1_robot_$(arg arm_name_b).urdf.xacro"/>
 	<arg name="has_elevator_robot_b" default="false"/>
     <arg name="move_robot_b" default="false"/>
 
@@ -56,7 +58,8 @@
 	<arg name="amcl_and_mapserver_c" default="false"/>
 	<arg name="map_file_c" default="$(find rb1_base_localization)/maps/empty/map_empty.yaml"/>
 	<arg name="map_frame_c" default="$(arg id_robot_c)_map"/>
-	<arg name="xacro_robot_c" default="rb1_robot_jaco_3fg.urdf.xacro"/>
+	<arg name="arm_name_c" default="j2s7s300"/>
+    <arg name="xacro_robot_c" default="rb1_robot_$(arg arm_name_c).urdf.xacro"/>
 	<arg name="has_elevator_robot_c" default="false"/>
     <arg name="move_robot_c" default="false"/>
 
@@ -66,6 +69,7 @@
 		<arg name="x_init_pose" value="$(arg x_init_pose_robot_a)"/>
 		<arg name="y_init_pose" value="$(arg y_init_pose_robot_a)"/>
 		<arg name="z_init_pose" value="$(arg z_init_pose_robot_a)"/>
+		<arg name="arm_name" value="$(arg arm_name_a)"/>
 		<arg name="xacro_robot" value="$(arg xacro_robot_a)"/>
 		<arg name="launch_robot_localization" value="$(arg localization_robot_a)"/>
 		<arg name="launch_amcl_and_mapserver" value="$(arg amcl_and_mapserver_a)"/>
@@ -84,6 +88,7 @@
 		<arg name="x_init_pose" value="$(arg x_init_pose_robot_b)"/>
 		<arg name="y_init_pose" value="$(arg y_init_pose_robot_b)"/>
 		<arg name="z_init_pose" value="$(arg z_init_pose_robot_b)"/>
+		<arg name="arm_name" value="$(arg arm_name_b)"/>
 		<arg name="xacro_robot" value="$(arg xacro_robot_b)"/>
 		<arg name="launch_robot_localization" value="$(arg localization_robot_b)"/>
 		<arg name="launch_amcl_and_mapserver" value="$(arg amcl_and_mapserver_b)"/>
@@ -102,6 +107,7 @@
 		<arg name="x_init_pose" value="$(arg x_init_pose_robot_c)"/>
 		<arg name="y_init_pose" value="$(arg y_init_pose_robot_c)"/>
 		<arg name="z_init_pose" value="$(arg z_init_pose_robot_c)"/>
+		<arg name="arm_name" value="$(arg arm_name_c)"/>
 		<arg name="xacro_robot" value="$(arg xacro_robot_c)"/>
 		<arg name="launch_robot_localization" value="$(arg localization_robot_c)"/>
 		<arg name="launch_amcl_and_mapserver" value="$(arg amcl_and_mapserver_c)"/>

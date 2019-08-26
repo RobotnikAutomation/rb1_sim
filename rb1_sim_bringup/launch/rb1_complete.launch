@@ -19,7 +19,8 @@
 	<arg name="amcl_and_mapserver_a" default="true"/>
 	<arg name="map_frame_a" default="$(arg id_robot_a)_map"/>
 	<arg name="move_robot_a" default="true"/>
-    <arg name="xacro_robot_a" default="rb1_robot_jaco_3fg.urdf.xacro"/>
+	<arg name="arm_name_a" default="j2s7s300"/>
+    <arg name="xacro_robot_a" default="rb1_robot_$(arg arm_name_a).urdf.xacro"/>
 
 
 	<!-- arguments robot b -->
@@ -32,7 +33,8 @@
 	<arg name="amcl_and_mapserver_b" default="false"/>
 	<arg name="map_frame_b" default="$(arg id_robot_b)_map"/>
     <arg name="move_robot_b" default="false"/>
-    <arg name="xacro_robot_b" default="rb1_robot_jaco_3fg.urdf.xacro"/>
+	<arg name="arm_name_b" default="j2s7s300"/>
+    <arg name="xacro_robot_b" default="rb1_robot_$(arg arm_name_b).urdf.xacro"/>
 
 	<!-- arguments robot c -->
 	<arg name="id_robot_c" default="rb1_c"/>
@@ -44,7 +46,8 @@
 	<arg name="amcl_and_mapserver_c" default="false"/>
 	<arg name="map_frame_c" default="$(arg id_robot_c)_map"/>
     <arg name="move_robot_c" default="false"/>
-    <arg name="xacro_robot_c" default="rb1_robot_jaco_3fg.urdf.xacro"/>
+	<arg name="arm_name_c" default="j2s7s300"/>
+    <arg name="xacro_robot_c" default="rb1_robot_$(arg arm_name_c).urdf.xacro"/>
 
 	<include file="$(find rb1_gazebo)/launch/rb1_gazebo.launch">
 		<!-- general args -->
@@ -61,6 +64,7 @@
 		<arg name="map_file_a" value="$(arg map_file_a)"/>
 		<arg name="map_frame_a" default="$(arg map_frame_a)"/>
 		<arg name="move_robot_a" default="$(arg move_robot_a)"/>
+		<arg name="arm_name_a" default="$(arg arm_name_a)"/>
         <arg name="xacro_robot_a" default="$(arg xacro_robot_a)"/>
 		<!-- robot_b args -->
 		<arg name="id_robot_b" default="$(arg id_robot_b)"/>
@@ -72,6 +76,7 @@
 		<arg name="map_file_b" value="$(arg map_file_b)"/>
 		<arg name="map_frame_b" default="$(arg map_frame_b)"/>
         <arg name="move_robot_b" default="$(arg move_robot_b)"/>
+		<arg name="arm_name_b" default="$(arg arm_name_b)"/>
         <arg name="xacro_robot_b" default="$(arg xacro_robot_b)"/>
 		<!-- robot_c args -->
 		<arg name="id_robot_c" default="$(arg id_robot_c)"/>
@@ -83,6 +88,7 @@
 		<arg name="map_file_c" value="$(arg map_file_c)"/>
 		<arg name="map_frame_c" default="$(arg map_frame_c)"/>
         <arg name="move_robot_c" default="$(arg move_robot_c)"/>
+		<arg name="arm_name_c" default="$(arg arm_name_c)"/>
         <arg name="xacro_robot_c" default="$(arg xacro_robot_c)"/>
 	</include>
 

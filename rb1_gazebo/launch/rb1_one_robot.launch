@@ -7,7 +7,8 @@
 	<arg name="y_init_pose" default="0"/>
 	<arg name="z_init_pose" default="0"/>
 	<arg name="has_elevator" default="false"/>
-	<arg name="xacro_robot" default="rb1_robot_jaco_3fg.urdf.xacro"/>
+	<arg name="arm_name" default="j2s7s300"/>
+	<arg name="xacro_robot" default="rb1_robot_$(arg arm_name).urdf.xacro"/>
 	<arg name="launch_robot_localization" default="false"/>
 	<arg name="launch_amcl_and_mapserver" default="false"/>
 	<arg name="launch_gmapping" default="false"/>
@@ -44,6 +45,7 @@
 			<arg name="sim" value="true"/>
 			<arg name="launch_robot_localization" value="$(arg launch_robot_localization)"/>
 			<arg name="has_elevator" value="$(arg has_elevator)"/>
+			<arg name="arm_name" value="$(arg arm_name)"/>
 		</include>
 
 		<!-- robot_localization nodes, publishes transformation world->odom->base_footprint -->
